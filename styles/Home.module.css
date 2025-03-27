@@ -1,0 +1,135 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+}
+
+.main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 1rem;
+  margin-bottom: 4rem;
+}
+
+.heroContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.highlight {
+  background: linear-gradient(45deg, #0070f3, #00a6ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  margin: 1.5rem 0 2rem;
+  color: #666;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: linear-gradient(45deg, #0070f3, #00a6ed);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 112, 243, 0.2);
+}
+
+.features {
+  padding: 4rem 0;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.cardIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+@media (max-width: 968px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    padding: 2rem 1rem;
+  }
+
+  .heroContent {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+  
+  .grid {
+    gap: 1.5rem;
+  }
+} 
