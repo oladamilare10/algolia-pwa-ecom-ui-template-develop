@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Product } from '../types/Product';
+
 import styles from '../styles/ProductCard.module.css';
+import type { Product } from '../types/Product';
 
 interface ProductCardProps {
   product: Product;
@@ -13,11 +14,11 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className={styles.card}>
         <div className={styles.imageContainer}>
           <Image
-            src={product.imageUrl}
             alt={product.name}
-            width={300}
-            height={300}
             className={styles.image}
+            height={300}
+            src={product.imageUrl}
+            width={300}
           />
         </div>
         <div className={styles.content}>
